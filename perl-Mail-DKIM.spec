@@ -1,14 +1,13 @@
-%define real_name Mail-DKIM
+%define module Mail-DKIM
 
+Name:		perl-%{module}
+Version:	0.32
+Release:	%mkrel 1
 Summary:	Implements DomainKeys Identified Mail (DKIM)
-Name:		perl-%{real_name}
-Version:	0.31
-Release:	%mkrel 0
 License:	GPL or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{real_name}
-Source0:	http://cpan.uwinnipeg.ca/cpan/authors/id/J/JA/JASLONG/%{real_name}-%{version}.tar.gz
-BuildRequires:	perl-devel
+URL:		http://search.cpan.org/dist/%{module}
+Source:     http://www.cpan.org/modules/by-module/Mail/%{module}-%{version}.tar.gz
 BuildRequires:	perl-Module-Build
 BuildRequires:	perl-Test-Pod
 BuildRequires:	perl(Crypt::OpenSSL::RSA)
@@ -19,7 +18,7 @@ BuildRequires:	perl(MIME::Base64)
 BuildRequires:	perl(Net::DNS)
 BuildRequires:	perl(Test::Simple)
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 This module implements the various components of the DKIM and DomainKeys
@@ -30,7 +29,7 @@ tries to implement these specifications:
 
 %prep
 
-%setup -q -n %{real_name}-%{version}
+%setup -q -n %{module}-%{version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
