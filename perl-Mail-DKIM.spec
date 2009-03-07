@@ -2,7 +2,7 @@
 
 Name:		perl-%{module}
 Version:	0.32
-Release:	%mkrel 2
+Release:	%mkrel 3
 Summary:	Implements DomainKeys Identified Mail (DKIM)
 License:	GPL or Artistic
 Group:		Development/Perl
