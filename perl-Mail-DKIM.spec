@@ -1,8 +1,8 @@
 %define module Mail-DKIM
 
 Name:		perl-%{module}
-Version:	0.32
-Release:	%mkrel 3
+Version:	0.33
+Release:	%mkrel 1
 Summary:	Implements DomainKeys Identified Mail (DKIM)
 License:	GPL or Artistic
 Group:		Development/Perl
