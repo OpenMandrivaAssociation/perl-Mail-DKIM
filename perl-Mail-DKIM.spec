@@ -1,13 +1,16 @@
-%define module Mail-DKIM
+%define upstream_name    Mail-DKIM
+%define upstream_version 0.36
 
-Name:		perl-%{module}
-Version:	0.36
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
 Release:	%mkrel 1
+
 Summary:	Implements DomainKeys Identified Mail (DKIM)
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{module}
-Source:     http://www.cpan.org/modules/by-module/Mail/%{module}-%{version}.tar.gz
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Mail/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires:	perl-Module-Build
 BuildRequires:	perl-Test-Pod
 BuildRequires:	perl(Crypt::OpenSSL::RSA)
@@ -18,7 +21,7 @@ BuildRequires:	perl(MIME::Base64)
 BuildRequires:	perl(Net::DNS)
 BuildRequires:	perl(Test::Simple)
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module implements the various components of the DKIM and DomainKeys
@@ -28,8 +31,7 @@ tries to implement these specifications:
  * RFC4870, for DomainKeys
 
 %prep
-
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -40,7 +42,6 @@ make test
 
 %install
 rm -rf %{buildroot}
-
 %makeinstall_std
 
 %clean 
@@ -57,4 +58,3 @@ rm -rf %{buildroot}
 %{perl_vendorlib}/Mail/DKIM/Canonicalization/*.pm
 %{perl_vendorlib}/Mail/DKIM.pm
 %{_mandir}/man3/*
-
