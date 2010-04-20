@@ -1,5 +1,5 @@
 %define upstream_name    Mail-DKIM
-%define upstream_version 0.37
+%define upstream_version 0.38
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
@@ -38,7 +38,7 @@ tries to implement these specifications:
 %make
 
 %check
-make test
+%make test
 
 %install
 rm -rf %{buildroot}
@@ -57,4 +57,5 @@ rm -rf %{buildroot}
 %{perl_vendorlib}/Mail/DKIM/Algorithm/*.pm
 %{perl_vendorlib}/Mail/DKIM/Canonicalization/*.pm
 %{perl_vendorlib}/Mail/DKIM.pm
+%{perl_vendorlib}/Mail/sample_mime_lite.pl
 %{_mandir}/man3/*
