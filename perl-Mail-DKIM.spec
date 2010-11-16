@@ -1,5 +1,5 @@
 %define upstream_name    Mail-DKIM
-%define upstream_version 0.38
+%define upstream_version 0.39
 
 Name:		perl-%{upstream_name}
 %if %{mdkversion} < 201000
@@ -7,7 +7,7 @@ Version:	%{upstream_version}
 %else
 Version:	%perl_convert_version %{upstream_version}
 %endif
-Release:	%mkrel 3
+Release:	%mkrel 1
 Summary:	Implements DomainKeys Identified Mail (DKIM)
 License:	GPL+ or Artistic
 Group:		Development/Perl
