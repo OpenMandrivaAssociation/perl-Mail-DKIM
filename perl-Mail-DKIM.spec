@@ -7,7 +7,7 @@ Version:	%{upstream_version}
 %else
 Version:	%perl_convert_version %{upstream_version}
 %endif
-Release:	%mkrel 1
+Release:	%mkrel 2
 Summary:	Implements DomainKeys Identified Mail (DKIM)
 License:	GPL+ or Artistic
 Group:		Development/Perl
