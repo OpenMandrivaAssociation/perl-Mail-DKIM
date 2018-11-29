@@ -1,10 +1,10 @@
 %define modname	Mail-DKIM
-%define modver 0.40
+%define modver 0.54
 
 Summary:	Implements DomainKeys Identified Mail (DKIM)
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	8
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
@@ -35,22 +35,20 @@ tries to implement these specifications:
 %__perl Makefile.PL INSTALLDIRS=vendor
 %make
 
-%check
-%make test
-
 %install
 %makeinstall_std
 
 %files
-%doc scripts Changes README TODO
+%doc scripts Changes README.md TODO
 %dir %{perl_vendorlib}/Mail/DKIM
 %dir %{perl_vendorlib}/Mail/DKIM/Algorithm
 %dir %{perl_vendorlib}/Mail/DKIM/Canonicalization
 %{perl_vendorlib}/Mail/DKIM/*.pm
+%{perl_vendorlib}/Mail/DKIM/ARC
 %{perl_vendorlib}/Mail/DKIM/Algorithm/*.pm
 %{perl_vendorlib}/Mail/DKIM/Canonicalization/*.pm
 %{perl_vendorlib}/Mail/DKIM.pm
-%{perl_vendorlib}/Mail/sample_mime_lite.pl
+#{perl_vendorlib}/Mail/sample_mime_lite.pl
 %{_mandir}/man3/*
 
 
