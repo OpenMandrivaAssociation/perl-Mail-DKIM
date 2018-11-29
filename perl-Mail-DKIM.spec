@@ -44,6 +44,7 @@ tries to implement these specifications:
 %dir %{perl_vendorlib}/Mail/DKIM/Algorithm
 %dir %{perl_vendorlib}/Mail/DKIM/Canonicalization
 %{perl_vendorlib}/Mail/DKIM/*.pm
+%{perl_vendorlib}/Mail/DKIM/ARC
 %{perl_vendorlib}/Mail/DKIM/Algorithm/*.pm
 %{perl_vendorlib}/Mail/DKIM/Canonicalization/*.pm
 %{perl_vendorlib}/Mail/DKIM.pm
