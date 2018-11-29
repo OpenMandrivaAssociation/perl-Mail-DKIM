@@ -39,7 +39,7 @@ tries to implement these specifications:
 %makeinstall_std
 
 %files
-%doc scripts Changes README TODO
+%doc scripts Changes README.md TODO
 %dir %{perl_vendorlib}/Mail/DKIM
 %dir %{perl_vendorlib}/Mail/DKIM/Algorithm
 %dir %{perl_vendorlib}/Mail/DKIM/Canonicalization
@@ -47,7 +47,7 @@ tries to implement these specifications:
 %{perl_vendorlib}/Mail/DKIM/Algorithm/*.pm
 %{perl_vendorlib}/Mail/DKIM/Canonicalization/*.pm
 %{perl_vendorlib}/Mail/DKIM.pm
-%{perl_vendorlib}/Mail/sample_mime_lite.pl
+#{perl_vendorlib}/Mail/sample_mime_lite.pl
 %{_mandir}/man3/*
 
 
