@@ -12,7 +12,7 @@ Source0:	http://www.cpan.org/modules/by-module/Mail/Mail-DKIM-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl-Module-Build
 BuildRequires:	perl-Test-Pod
-#BuildRequires:	perl(Crypt::OpenSSL::RSA)
+BuildRequires:	perl(Crypt::OpenSSL::RSA)
 BuildRequires:	perl(Digest::SHA)
 BuildRequires:	perl(Digest::SHA1)
 BuildRequires:	perl(Mail::Address)
