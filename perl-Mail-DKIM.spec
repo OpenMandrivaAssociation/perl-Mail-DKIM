@@ -19,7 +19,10 @@ BuildRequires:	perl(Mail::Address)
 BuildRequires:	perl(MIME::Base64)
 BuildRequires:	perl(Net::DNS)
 BuildRequires:	perl(Test::Simple)
+BuildRequires:  perl(Mail::AuthenticationResults)
 BuildRequires:	perl-devel
+
+Requires:     perl(Mail::AuthenticationResults)
 
 %description
 This module implements the various components of the DKIM and DomainKeys
