@@ -1,5 +1,2 @@
-removed_sources:
-  Mail-DKIM-0.39.tar.gz: 910966a7dac98fae9d2f73907080ca8bbc6087c5
 sources:
-  Mail-DKIM-0.40.tar.gz: 992fa0e37527eea83803ce8ec39d5a3ef9326278
-  Mail-DKIM-0.54.tar.gz: c9200ab75cb670e5da942272e98b9c9ab1e81513
+  Mail-DKIM-1.20200907.tar.gz: 0626f1b3b600aa20b3ad5db3e9d75ce2203c3bdd
