@@ -1,14 +1,13 @@
 %define modname	Mail-DKIM
-%define modver 1.20200907
 
 Summary:	Implements DomainKeys Identified Mail (DKIM)
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
+Version:	1.20230630
 Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/Mail/Mail-DKIM-%{modver}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Mail/Mail-DKIM-%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl-Module-Build
 BuildRequires:	perl-Test-Pod
@@ -32,14 +31,14 @@ tries to implement these specifications:
  * RFC4870, for DomainKeys
 
 %prep
-%setup -qn %{modname}-%{modver}
+%autosetup -p1 -n %{modname}-%{version}
+perl Makefile.PL INSTALLDIRS=vendor
 
 %build
-%__perl Makefile.PL INSTALLDIRS=vendor
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc scripts Changes README.md TODO
