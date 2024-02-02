@@ -2,7 +2,7 @@
 
 Summary:	Implements DomainKeys Identified Mail (DKIM)
 Name:		perl-%{modname}
-Version:	1.20230911
+Version:	1.20240124
 Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
