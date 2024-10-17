@@ -6,7 +6,7 @@ Version:	1.20240827
 Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{modname}
+Url:		https://search.cpan.org/dist/%{modname}
 Source0:	http://www.cpan.org/modules/by-module/Mail/Mail-DKIM-%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl-Module-Build
