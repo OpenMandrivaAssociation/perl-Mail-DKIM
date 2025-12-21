@@ -9,6 +9,7 @@ Group:		Development/Perl
 Url:		https://search.cpan.org/dist/%{modname}
 Source0:	http://www.cpan.org/modules/by-module/Mail/Mail-DKIM-%{version}.tar.gz
 BuildArch:	noarch
+BuildRequires:	make
 BuildRequires:	perl-Module-Build
 BuildRequires:	perl-Test-Pod
 BuildRequires:	perl(Crypt::OpenSSL::RSA)
