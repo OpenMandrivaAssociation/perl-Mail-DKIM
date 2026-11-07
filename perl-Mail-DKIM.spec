@@ -2,27 +2,33 @@
 
 Summary:	Implements DomainKeys Identified Mail (DKIM)
 Name:		perl-%{modname}
-Version:	1.20240923
+Version:	1.20261105
 Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		https://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/Mail/Mail-DKIM-%{version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/M/MB/MBRADSHAW/Mail-DKIM-%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	make
 BuildRequires:	perl-Module-Build
 BuildRequires:	perl-Test-Pod
 BuildRequires:	perl(Crypt::OpenSSL::RSA)
+BuildRequires:	perl(Crypt::PK::Ed25519)
 BuildRequires:	perl(Digest::SHA)
 BuildRequires:	perl(Digest::SHA1)
 BuildRequires:	perl(Mail::Address)
 BuildRequires:	perl(MIME::Base64)
 BuildRequires:	perl(Net::DNS)
 BuildRequires:	perl(Test::Simple)
-BuildRequires:  perl(Mail::AuthenticationResults)
+BuildRequires:	perl(Mail::AuthenticationResults)
+BuildRequires:	perl(Mail::AuthenticationResults::Header::AuthServID)
+BuildRequires:	perl(Mail::AuthenticationResults::Parser)
 BuildRequires:	perl-devel
 
-Requires:     perl(Mail::AuthenticationResults)
+Requires:	perl(Crypt::PK::Ed25519)
+Requires:	perl(Mail::AuthenticationResults)
+Requires:	perl(Mail::AuthenticationResults::Header::AuthServID)
+Requires:	perl(Mail::AuthenticationResults::Parser)
 
 %description
 This module implements the various components of the DKIM and DomainKeys
